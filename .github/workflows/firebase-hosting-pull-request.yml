@@ -26,8 +26,9 @@ jobs:
           echo "VITE_REACT_APP_APP_ID=${{ secrets.VITE_REACT_APP_APP_ID }}" >> $GITHUB_ENV
       - name: Build
         run: npm run build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - uses: FirebaseExtended/action-hosting-deploy@v0.9.0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_TYSKLANDREACTAPP }}
           projectId: tysklandreactapp
+          channelId: 'preview-${{ github.event.pull_request.number }}' # Dynamisk kanal baserad på PR-nummer

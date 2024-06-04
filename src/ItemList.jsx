@@ -223,3 +223,22 @@ ItemList.propTypes = {
   deleteItem: PropType.func.isRequired,
   updateItem: PropType.func.isRequired,
 }
+
+EditingRow.propTypes = {
+  item: PropType.object.isRequired,
+  editFormData: PropType.object.isRequired,
+  handleEditFormChange: PropType.func.isRequired,
+  handleSaveClick: PropType.func.isRequired,
+  handleCancelClick: PropType.func.isRequired,
+}
+
+DefaultRow.propTypes = {
+  item: PropType.object.isRequired,
+  handleEditClick: PropType.func.isRequired,
+  deleteItem: PropType.func.isRequired,
+}
+
+SubtotalDisplay.propTypes = {
+  group: PropType.array.isRequired,
+  calculateSubtotals: PropType.func.isRequired,
+}
