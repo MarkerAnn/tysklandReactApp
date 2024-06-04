@@ -24,7 +24,7 @@ const ItemForm = ({ addItem }) => {
     e.preventDefault()
     addItem(newItem)
     setNewItem({
-      amount: '',
+      amount: 1,
       name: '',
       type: 'Flak',
       price: '',
@@ -36,7 +36,7 @@ const ItemForm = ({ addItem }) => {
 
   return (
     <form onSubmit={handleSubmit} className='mb-6'>
-      <h2 className='text-xl font-bold mb-4'>Add New Item</h2>
+      <h2 className='text-xl mb-4'>Add New Item</h2>
       {Object.entries(newItem).map(([key, value]) => {
         if (key === 'type' || key === 'store') {
           return (

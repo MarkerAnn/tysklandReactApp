@@ -66,7 +66,8 @@ const StartPage = () => {
   }
 
   return (
-    <div className='container mx-auto p-4'>
+    <div className='container mx-auto p-4 '>
+      <h1 className='text-3xl pb-8'>Tyskland</h1>
       <ItemForm addItem={addItem} />
       <ItemList items={items} deleteItem={deleteItem} updateItem={updateItem} />
       <TotalSummary totalWeight={totalWeight} totalPrice={totalPrice} />
