@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import PropType from 'prop-types'
 
 const ItemList = ({ items, deleteItem, updateItem }) => {
   const [editIndex, setEditIndex] = useState(-1)
@@ -216,3 +217,9 @@ const SubtotalDisplay = ({ group, calculateSubtotals }) => {
 }
 
 export default ItemList
+
+ItemList.propTypes = {
+  items: PropType.array.isRequired,
+  deleteItem: PropType.func.isRequired,
+  updateItem: PropType.func.isRequired,
+}
